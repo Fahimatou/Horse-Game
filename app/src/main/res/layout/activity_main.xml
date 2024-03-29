@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".MainActivity">
+
+<Button
+    android:id="@+id/restartButton"
+    android:layout_width="192dp"
+    android:layout_height="39dp"
+    android:layout_marginTop="16dp"
+    android:text="Recommencer"
+    android:onClick="restartButtonOnClick"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.502"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+<Button
+    android:id="@+id/blueButton"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:text="Bleu"
+    android:onClick="blueButtonOnClick"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toStartOf="@+id/greenButton"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.631" />
+
+<Button
+    android:id="@+id/greenButton"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="6dp"
+    android:layout_marginEnd="7dp"
+    android:layout_marginBottom="12dp"
+    android:text="Vert"
+    android:onClick="greenButtonOnClick"
+    app:layout_constraintBottom_toTopOf="@+id/magentaButton"
+    app:layout_constraintEnd_toStartOf="@+id/RedButton"
+    app:layout_constraintStart_toEndOf="@+id/blueButton" />
+
+<Button
+    android:id="@+id/RedButton"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="16dp"
+    android:text="Rouge"
+    android:onClick="redButtonOnClick"
+    app:layout_constraintBottom_toTopOf="@+id/magentaButton"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.454"
+    app:layout_constraintStart_toEndOf="@+id/greenButton" />
+
+<Button
+    android:id="@+id/yellowButton"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:text="Jaune"
+    android:onClick="yellowButtonOnClick"
+    app:layout_constraintBottom_toBottomOf="@+id/magentaButton"
+    app:layout_constraintEnd_toStartOf="@+id/magentaButton"
+    app:layout_constraintHorizontal_bias="0.454"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/blueButton" />
+
+<Button
+    android:id="@+id/magentaButton"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="6dp"
+    android:layout_marginTop="3dp"
+    android:layout_marginEnd="7dp"
+    android:text="Magenta"
+    android:onClick="magentaButtonOnClick"
+    app:layout_constraintEnd_toStartOf="@+id/grayButton"
+    app:layout_constraintStart_toEndOf="@+id/yellowButton"
+    app:layout_constraintTop_toBottomOf="@+id/greenButton" />
+
+<Button
+    android:id="@+id/grayButton"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="16dp"
+    android:text="Gris"
+    android:onClick="grayButtonOnClick"
+    app:layout_constraintBottom_toBottomOf="@+id/magentaButton"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.454"
+    app:layout_constraintStart_toEndOf="@+id/magentaButton"
+    app:layout_constraintTop_toBottomOf="@+id/RedButton" />
+
+<ImageView
+    android:id="@+id/chevalImageView"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:layout_marginBottom="50dp"
+    android:scaleType="fitCenter"
+    app:layout_constraintBottom_toTopOf="@+id/greenButton"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.0"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/restartButton"
+    app:layout_constraintVertical_bias="1.0"
+    app:srcCompat="@drawable/cheval" />
+
+<TextView
+    android:id="@+id/verifierTextView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textColor="#6ADD0A"
+    android:textColorHighlight="#1FBF26"
+
+    android:textColorHint="#21B627"
+    android:textColorLink="#1FC125"
+    android:textSize="50dp"
+    android:textStyle="bold"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/magentaButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
